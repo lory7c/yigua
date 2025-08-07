@@ -23,14 +23,22 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.24.5'
+        flutter-version: '3.22.0'
         channel: 'stable'
     
     - name: Get dependencies
-      run: flutter pub get
+      run: |
+        flutter clean
+        flutter pub get
+    
+    - name: Fix Gradle properties
+      run: |
+        echo "flutter.compileSdkVersion=34" >> android/gradle.properties
+        echo "flutter.minSdkVersion=21" >> android/gradle.properties
+        echo "flutter.targetSdkVersion=34" >> android/gradle.properties
     
     - name: Build APK
-      run: flutter build apk --release
+      run: flutter build apk --release --no-tree-shake-icons
     
     - name: Upload APK
       uses: actions/upload-artifact@v3
