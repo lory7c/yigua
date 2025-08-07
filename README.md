@@ -84,4 +84,4 @@ yigua_app/
 
 - Flutter 3.0+
 - Dart 3.0+
-- Android SDK 21+
+- Android SDK 21+Trigger build
