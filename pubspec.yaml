@@ -1,0 +1,54 @@
+name: yigua_app
+description: 易卦算甲 - 传统文化学习应用
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # UI相关
+  cupertino_icons: ^1.0.5
+  table_calendar: ^3.0.9
+  
+  # 网络请求
+  http: ^1.1.0
+  
+  # 本地存储
+  shared_preferences: ^2.2.0
+  sqflite: ^2.3.0
+  path_provider: ^2.1.0
+  
+  # 工具类
+  intl: 0.20.2
+  url_launcher: ^6.1.12
+  
+  # PDF阅读
+  flutter_pdfview: ^1.3.2
+  path: ^1.8.3
+  permission_handler: ^11.0.1
+  
+  # 状态管理
+  provider: ^6.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/images/
+    - assets/data/
+  
+  # fonts:
+  #   - family: CustomFont
+  #     fonts:
+  #       - asset: assets/fonts/custom.ttf
