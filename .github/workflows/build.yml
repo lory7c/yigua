@@ -33,9 +33,9 @@ jobs:
     
     - name: Fix build issues
       run: |
-        echo "flutter.compileSdkVersion=35" >> android/gradle.properties
+        echo "flutter.compileSdkVersion=34" >> android/gradle.properties
         echo "flutter.minSdkVersion=21" >> android/gradle.properties
-        echo "flutter.targetSdkVersion=35" >> android/gradle.properties
+        echo "flutter.targetSdkVersion=34" >> android/gradle.properties
         
         # Create missing directories
         mkdir -p assets/images
