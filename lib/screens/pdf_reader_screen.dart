@@ -8,14 +8,9 @@ class PDFReaderScreen extends StatelessWidget {
   const PDFReaderScreen({super.key, required this.book});
 
   Future<void> _openPDF() async {
-    // 暂时使用外部浏览器打开PDF
+    // 暂时显示提示信息
     // 后续可以添加PDF查看功能
-    final Uri url = Uri.parse(book.pdfUrl ?? '');
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    } else {
-      debugPrint('无法打开PDF: ${book.pdfUrl}');
-    }
+    debugPrint('PDF文件: ${book.fileName}');
   }
 
   @override
@@ -47,9 +42,16 @@ class PDFReaderScreen extends StatelessWidget {
             ),
             const SizedBox(height: 30),
             ElevatedButton.icon(
-              onPressed: _openPDF,
-              icon: const Icon(Icons.open_in_browser),
-              label: const Text('在浏览器中打开'),
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('PDF文件: ${book.fileName}'),
+                    duration: const Duration(seconds: 2),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.info_outline),
+              label: const Text('查看文件信息'),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.deepPurple,
                 padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
