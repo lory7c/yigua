@@ -20,21 +20,23 @@ jobs:
     - name: Setup Flutter
       uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.22.0'
+        flutter-version: '3.19.0'
         channel: 'stable'
     
     - name: Get dependencies
       run: |
+        cd yigua_app
         flutter clean
         flutter pub get
     
     - name: Build Web
       run: |
+        cd yigua_app
         flutter build web --release --base-href "/yigua/"
     
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build/web
+        publish_dir: ./yigua_app/build/web
         cname: 
