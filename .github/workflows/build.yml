@@ -51,19 +51,6 @@ jobs:
         # Create placeholder files
         touch assets/images/.gitkeep
         touch assets/data/.gitkeep
-        
-        # Use Flutter default icon
-        cp -r $FLUTTER_ROOT/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-*/assets/CupertinoIcons.ttf android/app/src/main/res/ 2>/dev/null || true
-        
-        # Create default launcher icon directories
-        for size in hdpi mdpi xhdpi xxhdpi xxxhdpi; do
-          mkdir -p android/app/src/main/res/mipmap-$size
-          # Create a simple colored square as placeholder icon
-          echo '<?xml version="1.0" encoding="utf-8"?>
-          <shape xmlns:android="http://schemas.android.com/apk/res/android">
-              <solid android:color="#667EEA"/>
-          </shape>' > android/app/src/main/res/mipmap-$size/ic_launcher.xml
-        done
     
     - name: Build APK
       run: |
