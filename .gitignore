@@ -50,7 +50,7 @@ node_modules/
 windows/
 linux/
 macos/
-web/
+# web/ # 需要保留web目录用于GitHub Pages
 
 # Python
 __pycache__/
