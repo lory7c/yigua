@@ -1,0 +1,331 @@
+{
+  "test_timestamp": "2025-08-08 07:21:23",
+  "setup_result": {
+    "record_count": 50000,
+    "insert_time_seconds": 6.068959712982178,
+    "insert_rate_per_second": 8238.644242940756
+  },
+  "basic_query_performance": {
+    "total_queries_tested": 7,
+    "queries_under_10ms": 6,
+    "success_rate": 0.8571428571428571,
+    "overall_avg_time_ms": 3.57076781136649,
+    "detailed_results": [
+      {
+        "query_type": "count_all",
+        "avg_time_ms": 0.0041961669921875,
+        "min_time_ms": 0.002384185791015625,
+        "max_time_ms": 0.012636184692382812,
+        "result_count": 1,
+        "under_10ms": true,
+        "performance_grade": "A"
+      },
+      {
+        "query_type": "select_by_id",
+        "avg_time_ms": 0.009131431579589844,
+        "min_time_ms": 0.007152557373046875,
+        "max_time_ms": 0.0171661376953125,
+        "result_count": 1,
+        "under_10ms": true,
+        "performance_grade": "A"
+      },
+      {
+        "query_type": "select_by_category",
+        "avg_time_ms": 24.884843826293945,
+        "min_time_ms": 23.719072341918945,
+        "max_time_ms": 26.814937591552734,
+        "result_count": 4996,
+        "under_10ms": false,
+        "performance_grade": "C"
+      },
+      {
+        "query_type": "group_by_category",
+        "avg_time_ms": 0.0835418701171875,
+        "min_time_ms": 0.002384185791015625,
+        "max_time_ms": 0.7903575897216797,
+        "result_count": 10,
+        "under_10ms": true,
+        "performance_grade": "A"
+      },
+      {
+        "query_type": "complex_filter_sort",
+        "avg_time_ms": 0.0033140182495117188,
+        "min_time_ms": 0.002384185791015625,
+        "max_time_ms": 0.008821487426757812,
+        "result_count": 100,
+        "under_10ms": true,
+        "performance_grade": "A"
+      },
+      {
+        "query_type": "self_join",
+        "avg_time_ms": 0.0071048736572265625,
+        "min_time_ms": 0.0059604644775390625,
+        "max_time_ms": 0.011205673217773438,
+        "result_count": 50,
+        "under_10ms": true,
+        "performance_grade": "A"
+      },
+      {
+        "query_type": "text_search",
+        "avg_time_ms": 0.00324249267578125,
+        "min_time_ms": 0.0026226043701171875,
+        "max_time_ms": 0.0069141387939453125,
+        "result_count": 20,
+        "under_10ms": true,
+        "performance_grade": "A"
+      }
+    ]
+  },
+  "cache_effectiveness": {
+    "cold_query_times": [
+      15.494346618652344,
+      0.013589859008789062,
+      0.004291534423828125,
+      0.00286102294921875,
+      0.0026226043701171875,
+      0.0030994415283203125,
+      0.00286102294921875,
+      0.0026226043701171875,
+      0.0026226043701171875,
+      0.0030994415283203125
+    ],
+    "cached_query_times": [
+      0.0035762786865234375,
+      0.0030994415283203125,
+      0.018358230590820312,
+      0.0059604644775390625,
+      0.003337860107421875,
+      0.003337860107421875,
+      0.0030994415283203125,
+      0.0030994415283203125,
+      0.0026226043701171875,
+      0.004291534423828125
+    ],
+    "cache_hit_improvement": 0.996730420900746,
+    "avg_cold_time_ms": 1.553201675415039,
+    "avg_cached_time_ms": 0.005078315734863281
+  },
+  "mobile_pagination_performance": {
+    "wifi": {
+      "scenario": "WiFi环境",
+      "initial_load_time_ms": 0.247955322265625,
+      "avg_page_load_time_ms": 15.740203857421875,
+      "page_load_times_ms": [
+        0.0057220458984375,
+        29.1287899017334,
+        16.328096389770508,
+        17.641067504882812,
+        15.597343444824219
+      ],
+      "under_100ms_rate": 1.0
+    },
+    "mobile": {
+      "scenario": "移动网络",
+      "initial_load_time_ms": 0.22101402282714844,
+      "avg_page_load_time_ms": 12.422752380371094,
+      "page_load_times_ms": [
+        0.011682510375976562,
+        19.253015518188477,
+        12.628555297851562,
+        15.42520523071289,
+        14.795303344726562
+      ],
+      "under_100ms_rate": 1.0
+    },
+    "slow_mobile": {
+      "scenario": "慢速移动网络",
+      "initial_load_time_ms": 0.2295970916748047,
+      "avg_page_load_time_ms": 11.43193244934082,
+      "page_load_times_ms": [
+        0.008821487426757812,
+        19.285917282104492,
+        10.548830032348633,
+        14.791250228881836,
+        12.524843215942383
+      ],
+      "under_100ms_rate": 1.0
+    }
+  },
+  "concurrent_query_performance": {
+    "1": {
+      "concurrency_level": 1,
+      "total_queries": 20,
+      "total_time_seconds": 0.008201360702514648,
+      "avg_query_time_ms": 0.3807187080383301,
+      "queries_per_second": 2438.6197273176545,
+      "under_10ms_rate": 1.0
+    },
+    "5": {
+      "concurrency_level": 5,
+      "total_queries": 100,
+      "total_time_seconds": 0.001402139663696289,
+      "avg_query_time_ms": 0.0036144256591796875,
+      "queries_per_second": 71319.57150144533,
+      "under_10ms_rate": 1.0
+    },
+    "10": {
+      "concurrency_level": 10,
+      "total_queries": 200,
+      "total_time_seconds": 0.00267791748046875,
+      "avg_query_time_ms": 0.00477910041809082,
+      "queries_per_second": 74684.90028490029,
+      "under_10ms_rate": 1.0
+    },
+    "20": {
+      "concurrency_level": 20,
+      "total_queries": 400,
+      "total_time_seconds": 0.006272554397583008,
+      "avg_query_time_ms": 0.006336569786071777,
+      "queries_per_second": 63769.87342734425,
+      "under_10ms_rate": 1.0
+    }
+  },
+  "slow_query_analysis": {
+    "analyzed_queries": 3,
+    "analysis_results": [
+      {
+        "query": "SELECT * FROM performance_test_data WHERE content LIKE '%测试%' AND title LIKE '%标题%'",
+        "execution_time_ms": 255.04565238952637,
+        "bottlenecks": [],
+        "optimization_suggestions": [],
+        "estimated_improvement": 0.0,
+        "detailed_suggestions": {
+          "original_query": "SELECT * FROM performance_test_data WHERE content LIKE '%测试%' AND title LIKE '%标题%'",
+          "execution_time_ms": 255.04565238952637,
+          "analysis": {
+            "query": "SELECT * FROM performance_test_data WHERE content LIKE '%测试%' AND title LIKE '%标题%'",
+            "plan_steps": [
+              {
+                "id": 2,
+                "parent": 0,
+                "notused": 216,
+                "detail": "SCAN performance_test_data"
+              }
+            ],
+            "total_cost": 0.0,
+            "table_scans": [],
+            "index_scans": [],
+            "join_operations": [],
+            "sort_operations": [],
+            "temp_table_usage": false,
+            "estimated_rows": 0
+          },
+          "suggestions": [],
+          "rewritten_queries": [],
+          "expected_improvement": 0.0
+        }
+      },
+      {
+        "query": "SELECT * FROM performance_test_data WHERE id IN (SELECT id FROM performance_test_data WHERE view_cou...",
+        "execution_time_ms": 57.81126022338867,
+        "bottlenecks": [],
+        "optimization_suggestions": [],
+        "estimated_improvement": 0.0,
+        "detailed_suggestions": {
+          "original_query": "SELECT * FROM performance_test_data WHERE id IN (SELECT id FROM performance_test_data WHERE view_count > 8000)",
+          "execution_time_ms": 57.81126022338867,
+          "analysis": {
+            "query": "SELECT * FROM performance_test_data WHERE id IN (SELECT id FROM performance_test_data WHERE view_count > 8000)",
+            "plan_steps": [
+              {
+                "id": 2,
+                "parent": 0,
+                "notused": 91,
+                "detail": "SEARCH performance_test_data USING INTEGER PRIMARY KEY (rowid=?)"
+              },
+              {
+                "id": 6,
+                "parent": 0,
+                "notused": 0,
+                "detail": "LIST SUBQUERY 1"
+              },
+              {
+                "id": 9,
+                "parent": 6,
+                "notused": 216,
+                "detail": "SCAN performance_test_data"
+              },
+              {
+                "id": 17,
+                "parent": 6,
+                "notused": 0,
+                "detail": "CREATE BLOOM FILTER"
+              }
+            ],
+            "total_cost": 0.0,
+            "table_scans": [],
+            "index_scans": [],
+            "join_operations": [],
+            "sort_operations": [],
+            "temp_table_usage": false,
+            "estimated_rows": 0
+          },
+          "suggestions": [],
+          "rewritten_queries": [
+            {
+              "type": "subquery_to_join",
+              "description": "将相关子查询改写为JOIN操作",
+              "example": "-- 将 WHERE id IN (SELECT...) 改写为 INNER JOIN"
+            }
+          ],
+          "expected_improvement": 0.0
+        }
+      },
+      {
+        "query": "SELECT * FROM performance_test_data WHERE created_year BETWEEN 1500 AND 2000 ORDER BY content",
+        "execution_time_ms": 148.3445167541504,
+        "bottlenecks": [
+          "使用临时表，可能由于复杂的GROUP BY或ORDER BY造成",
+          "排序操作可能消耗大量资源"
+        ],
+        "optimization_suggestions": [
+          "考虑重构查询或创建覆盖索引",
+          "为ORDER BY列创建索引"
+        ],
+        "estimated_improvement": 0.55,
+        "detailed_suggestions": {
+          "original_query": "SELECT * FROM performance_test_data WHERE created_year BETWEEN 1500 AND 2000 ORDER BY content",
+          "execution_time_ms": 148.3445167541504,
+          "analysis": {
+            "query": "SELECT * FROM performance_test_data WHERE created_year BETWEEN 1500 AND 2000 ORDER BY content",
+            "plan_steps": [
+              {
+                "id": 4,
+                "parent": 0,
+                "notused": 162,
+                "detail": "SEARCH performance_test_data USING INDEX idx_year (created_year>? AND created_year<?)"
+              },
+              {
+                "id": 22,
+                "parent": 0,
+                "notused": 0,
+                "detail": "USE TEMP B-TREE FOR ORDER BY"
+              }
+            ],
+            "total_cost": 251.0,
+            "table_scans": [],
+            "index_scans": [
+              "IDX_YEAR"
+            ],
+            "join_operations": [],
+            "sort_operations": [
+              "USE TEMP B-TREE FOR ORDER BY"
+            ],
+            "temp_table_usage": true,
+            "estimated_rows": 10
+          },
+          "suggestions": [
+            {
+              "type": "create_sort_index",
+              "reason": "消除排序操作，直接从索引返回有序结果",
+              "suggested_ddl": "CREATE INDEX idx_target_table_sort ON target_table(content)",
+              "expected_benefit": "25-50%的查询性能提升"
+            }
+          ],
+          "rewritten_queries": [],
+          "expected_improvement": 0.55
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+# 核心依赖
+torch>=2.0.0
+transformers>=4.35.0
+sentence-transformers>=2.2.0
+networkx>=3.0
+numpy>=1.24.0
+pandas>=2.0.0
+
+# 向量数据库
+qdrant-client>=1.7.0
+faiss-cpu>=1.7.4
+chromadb>=0.4.0
+
+# PDF处理
+pdfplumber>=0.10.0
+PyPDF2>=3.0.0
+PyMuPDF>=1.23.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# NLP工具
+jieba>=0.42.0
+spacy>=3.7.0
+python-Levenshtein>=0.21.0
+
+# API框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+python-multipart>=0.0.6
+websockets>=12.0
+
+# 模型加速 (CPU only)
+bitsandbytes>=0.41.0
+accelerate>=0.24.0
+
+# 知识图谱可视化
+matplotlib>=3.7.0
+plotly>=5.17.0
+pyvis>=0.3.2
+python-louvain>=0.16
+
+# 工具库
+aiofiles>=23.0.0
+python-dotenv>=1.0.0
+tqdm>=4.66.0
+loguru>=0.7.0
+pyyaml>=6.0
+redis>=5.0.0
+
+# 开发工具
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.6.0
+
+# 易学相关（可选）
+lunarcalendar>=0.0.9
+ephem>=4.1.4

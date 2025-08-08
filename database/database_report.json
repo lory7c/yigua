@@ -1,0 +1,43 @@
+{
+  "database_overview": {
+    "total_documents": 104,
+    "total_extracted_content": 104,
+    "total_hexagrams": 29,
+    "total_yao_content": 31,
+    "total_cases": 48,
+    "total_keywords": 371
+  },
+  "category_distribution": {
+    "六爻": 45,
+    "其他术数": 29,
+    "大六壬": 9,
+    "奇门遁甲": 7,
+    "周易基础": 6,
+    "八字命理": 3,
+    "紫微斗数": 3,
+    "梅花易数": 2
+  },
+  "method_distribution": {
+    "pdfplumber": 99,
+    "pymupdf": 5
+  },
+  "top_keywords": {
+    "阴阳": 62,
+    "五行": 58,
+    "六亲": 42,
+    "用神": 41,
+    "八卦": 38,
+    "占卜": 31,
+    "预测": 29,
+    "太极": 28,
+    "忌神": 24,
+    "世应": 18
+  },
+  "content_quality": {
+    "average_text_length": 49350.84,
+    "average_word_count": 4652.18,
+    "max_text_length": 233630,
+    "min_text_length": 87
+  },
+  "generated_at": "2025-08-08T08:03:06.869311"
+}

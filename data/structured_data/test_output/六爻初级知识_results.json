@@ -1,0 +1,95 @@
+{
+  "file_info": {
+    "input_path": "六爻初级知识.txt",
+    "file_name": "六爻初级知识.txt",
+    "file_size": 26568,
+    "text_type": "general"
+  },
+  "processing_results": {
+    "original_length": 4931,
+    "cleaned_length": 55,
+    "compression_ratio": 0.9888460758466843,
+    "cleaned_text": "仯 鱾 仯 㡢羮档\n㹬\n硢桢 綦 裬 衰X O O 飬 棬 棬 䣬 飬飬 汸 硢 崦 1 磬 2 䶯 3 硣飻",
+    "classification": {
+      "segments_count": 1,
+      "structure_analysis": {
+        "total_segments": 1,
+        "content_types": {
+          "gua_ci": 1
+        },
+        "type_distribution": {
+          "gua_ci": {
+            "count": 1,
+            "percentage": 100.0,
+            "avg_confidence": 0.2,
+            "avg_position": 0.0,
+            "position_spread": 0
+          }
+        },
+        "document_flow": [
+          "gua_ci"
+        ],
+        "high_confidence_types": [],
+        "low_confidence_types": [
+          "gua_ci"
+        ]
+      },
+      "segments": [
+        {
+          "type": "gua_ci",
+          "confidence": 0.2,
+          "start_position": 0,
+          "end_position": 55,
+          "text_preview": "仯 鱾 仯 㡢羮档\n㹬\n硢桢 綦 裬 衰X O O 飬 棬 棬 䣬 飬飬 汸 硢 崦 1 磬 2 䶯 3 硣飻"
+        }
+      ]
+    },
+    "extracted_info": {
+      "type": "general",
+      "data": {
+        "gua_name": [],
+        "yao_ci": [],
+        "datetime": [],
+        "numbers": [
+          {
+            "info_type": "numbers",
+            "content": "1",
+            "confidence": "0.7",
+            "position": "43",
+            "metadata": {},
+            "related_info": []
+          },
+          {
+            "info_type": "numbers",
+            "content": "2",
+            "confidence": "0.7",
+            "position": "47",
+            "metadata": {},
+            "related_info": []
+          },
+          {
+            "info_type": "numbers",
+            "content": "3",
+            "confidence": "0.7",
+            "position": "51",
+            "metadata": {},
+            "related_info": []
+          }
+        ]
+      }
+    },
+    "quality_report": {
+      "overall_score": 100,
+      "total_issues": 0,
+      "issue_summary": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "warnings": 0
+      },
+      "recommendations": []
+    }
+  },
+  "processing_time": 0.021500825881958008,
+  "timestamp": 1754604020.5221543
+}

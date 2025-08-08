@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-08-08 07:12:12",
+  "tests": {
+    "database": {
+      "total_time": 0.014556646347045898,
+      "avg_query_time": 0.0015353560447692871,
+      "queries_tested": 4,
+      "status": "PASS"
+    },
+    "vector_search": {
+      "documents_tested": 100,
+      "vector_dimension": 512,
+      "search_time": 0.002418041229248047,
+      "total_time": 0.231825590133667,
+      "throughput": 431.35876389807345,
+      "status": "SLOW"
+    },
+    "text_processing": {
+      "documents_processed": 100,
+      "segmentation_time": 0.37831854820251465,
+      "keyword_extraction_time": 0.0001423358917236328,
+      "total_words": 1525,
+      "total_keywords": 100,
+      "total_time": 0.4801516532897949,
+      "throughput": 208.26753238240988,
+      "status": "PASS"
+    },
+    "knowledge_graph": {
+      "nodes": 50,
+      "edges": 100,
+      "neighbor_query_time": 7.62939453125e-06,
+      "path_query_time": 8.869171142578125e-05,
+      "neighbors_found": 4,
+      "path_found": true,
+      "total_time": 0.00017571449279785156,
+      "status": "PASS"
+    }
+  },
+  "summary": {
+    "tests_passed": 3,
+    "tests_total": 4,
+    "success_rate": 75.0,
+    "overall_status": "GOOD"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-08-08T07:26:32.464266",
+  "summary": {
+    "total_queries_analyzed": 5,
+    "slow_queries_found": 0,
+    "index_recommendations": 0
+  },
+  "query_analysis": [
+    {
+      "query": "SELECT * FROM test_data WHERE category = \"category_1\"",
+      "query_type": "simple_select",
+      "execution_time_ms": 1.6689538955688477,
+      "rows_examined": 1,
+      "rows_returned": 1000,
+      "uses_index": false,
+      "index_names": [],
+      "bottlenecks": [],
+      "recommendations": [],
+      "complexity_score": 1.5
+    },
+    {
+      "query": "SELECT * FROM test_data WHERE value > 500",
+      "query_type": "simple_select",
+      "execution_time_ms": 4.999852180480957,
+      "rows_examined": 1,
+      "rows_returned": 4970,
+      "uses_index": false,
+      "index_names": [],
+      "bottlenecks": [],
+      "recommendations": [],
+      "complexity_score": 1.5
+    },
+    {
+      "query": "SELECT COUNT(*) FROM test_data GROUP BY category",
+      "query_type": "aggregation",
+      "execution_time_ms": 2.86257266998291,
+      "rows_examined": 1,
+      "rows_returned": 10,
+      "uses_index": false,
+      "index_names": [],
+      "bottlenecks": [],
+      "recommendations": [],
+      "complexity_score": 2.0
+    },
+    {
+      "query": "SELECT * FROM test_data ORDER BY value DESC LIMIT 10",
+      "query_type": "sorted_query",
+      "execution_time_ms": 1.0662317276000977,
+      "rows_examined": 1,
+      "rows_returned": 10,
+      "uses_index": false,
+      "index_names": [],
+      "bottlenecks": [],
+      "recommendations": [],
+      "complexity_score": 1.5
+    },
+    {
+      "query": "SELECT * FROM test_data WHERE category = \"category_1\" AND value > 500",
+      "query_type": "simple_select",
+      "execution_time_ms": 1.0353803634643555,
+      "rows_examined": 1,
+      "rows_returned": 486,
+      "uses_index": false,
+      "index_names": [],
+      "bottlenecks": [],
+      "recommendations": [],
+      "complexity_score": 1.5
+    }
+  ],
+  "slow_queries": [],
+  "index_recommendations": [],
+  "performance_insights": [
+    "平均查询时间 2.3ms，性能良好",
+    "索引使用率 0.0%，建议创建更多索引"
+  ]
+}

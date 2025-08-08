@@ -1,0 +1,134 @@
+{
+  "file_info": {
+    "input_path": "test_sample.txt",
+    "file_name": "test_sample.txt",
+    "file_size": 860,
+    "text_type": "yijing"
+  },
+  "processing_results": {
+    "original_length": 306,
+    "cleaned_length": 296,
+    "compression_ratio": 0.032679738562091505,
+    "cleaned_text": "乾卦测试文档 乾：元亨利贞。 彖曰：大哉乾元，万物资始，乃统天。云行雨施，品物流形。\n大明始终，六位时成，时乘六龙以御天。乾道变化，各正性命，\n保合大和，乃利贞。首出庶物，万国咸宁。 象曰：天行健，君子以自强不息。 初九：潜龙勿用。\n象曰：潜龙勿用，阳在下也。 九二：见龙在田，利见大人。\n象曰：见龙在田，德施普也。 九三：君子终日乾乾，夕惕若厉，无咎。\n象曰：终日乾乾，反复道也。 九四：或跃在渊，无咎。\n象曰：或跃在渊，进无咎也。 九五：飞龙在天，利见大人。\n象曰：飞龙在天，大人造也。 上九：亢龙有悔。\n象曰：亢龙有悔，盈不可久也。 用九：见群龙无首，吉。\n象曰：用九天德，不可为首也。",
+    "classification": {
+      "segments_count": 1,
+      "structure_analysis": {
+        "total_segments": 1,
+        "content_types": {
+          "xiang_ci": 1
+        },
+        "type_distribution": {
+          "xiang_ci": {
+            "count": 1,
+            "percentage": 100.0,
+            "avg_confidence": 0.66,
+            "avg_position": 0.0,
+            "position_spread": 0
+          }
+        },
+        "document_flow": [
+          "xiang_ci"
+        ],
+        "high_confidence_types": [],
+        "low_confidence_types": []
+      },
+      "segments": [
+        {
+          "type": "xiang_ci",
+          "confidence": 0.66,
+          "start_position": 0,
+          "end_position": 296,
+          "text_preview": "乾卦测试文档 乾：元亨利贞。 彖曰：大哉乾元，万物资始，乃统天。云行雨施，品物流形。\n大明始终，六位时成，时乘六龙以御天。乾道变化，各正性命，\n保合大和，乃利贞。首出庶物，万国咸宁。 象曰：天行健，君..."
+        }
+      ]
+    },
+    "extracted_info": {
+      "type": "yijing",
+      "data": {
+        "gua_name": "乾",
+        "gua_ci": "乾：元亨利贞。",
+        "tuan_ci": "彖曰：大哉乾元，万物资始，乃统天。",
+        "xiang_ci": "象曰：天行健，君子以自强不息。",
+        "yao_ci": [
+          {
+            "content": "初九: 潜龙勿用。",
+            "metadata": {
+              "yao_name": "初九",
+              "yao_text": "潜龙勿用。",
+              "position": "1",
+              "type": "阳",
+              "name": "初九"
+            },
+            "position": "108"
+          },
+          {
+            "content": "九二: 见龙在田，利见大人。",
+            "metadata": {
+              "yao_name": "九二",
+              "yao_text": "见龙在田，利见大人。",
+              "position": "2",
+              "type": "阳",
+              "name": "九二"
+            },
+            "position": "131"
+          },
+          {
+            "content": "九三: 君子终日乾乾，夕惕若厉，无咎。",
+            "metadata": {
+              "yao_name": "九三",
+              "yao_text": "君子终日乾乾，夕惕若厉，无咎。",
+              "position": "3",
+              "type": "阳",
+              "name": "九三"
+            },
+            "position": "159"
+          },
+          {
+            "content": "九四: 或跃在渊，无咎。",
+            "metadata": {
+              "yao_name": "九四",
+              "yao_text": "或跃在渊，无咎。",
+              "position": "4",
+              "type": "阳",
+              "name": "九四"
+            },
+            "position": "192"
+          },
+          {
+            "content": "九五: 飞龙在天，利见大人。",
+            "metadata": {
+              "yao_name": "九五",
+              "yao_text": "飞龙在天，利见大人。",
+              "position": "5",
+              "type": "阳",
+              "name": "九五"
+            },
+            "position": "218"
+          },
+          {
+            "content": "上九: 亢龙有悔。",
+            "metadata": {
+              "yao_name": "上九",
+              "yao_text": "亢龙有悔。",
+              "position": "6",
+              "type": "阳",
+              "name": "上九"
+            },
+            "position": "246"
+          }
+        ],
+        "annotations": [],
+        "case_studies": [],
+        "metadata": {}
+      }
+    },
+    "quality_report": {
+      "overall_score": null,
+      "total_issues": null,
+      "issue_summary": null,
+      "recommendations": []
+    }
+  },
+  "processing_time": 0.0024864673614501953,
+  "timestamp": 1754604114.989095
+}

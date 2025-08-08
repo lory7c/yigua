@@ -1,0 +1,30 @@
+{
+  "test_samples": 3,
+  "module_performance": {
+    "text_cleaner": {
+      "total_time": 4.9114227294921875e-05,
+      "chars_per_second": 19016892.893203884,
+      "texts_per_second": 61082.09708737864
+    },
+    "content_classifier": {
+      "total_time": 0.0007257461547851562,
+      "chars_per_second": 1286951.358738502,
+      "texts_per_second": 4133.676741130092
+    },
+    "info_extractor": {
+      "total_time": 0.00024271011352539062,
+      "chars_per_second": 3848212.1178781926,
+      "texts_per_second": 12360.424361493124
+    },
+    "quality_checker": {
+      "total_time": 0.0010721683502197266,
+      "chars_per_second": 871131.8514565266,
+      "texts_per_second": 2798.0680453635755
+    }
+  },
+  "overall_performance": {
+    "total_time": 0.0020897388458251953,
+    "avg_chars_per_second": 1787783.1995436396,
+    "avg_texts_per_second": 5742.344324015972
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "original_text": "\n        乾卦\n        \n        乾：元亨利贞。\n        \n        彖曰：大哉乾元，万物资始，乃统天。云行雨施，品物流形。\n        大明始终，六位时成，时乘六龙以御天。乾道变化，各正性命，\n        保合大和，乃利贞。首出庶物，万国咸宁。\n        \n        象曰：天行健，君子以自强不息。\n        \n        初九：潜龙勿用。\n        象曰：潜龙勿用，阳在下也。\n        \n        九二：见龙在田，利见大人。\n        象曰：见龙在田，德施普也。\n        \n        九三：君子终日乾乾，夕惕若厉，无咎。\n        象曰：终日乾乾，反复道也。\n        ",
+  "text_type": "yijing",
+  "pipeline_stages": {
+    "cleaning": {
+      "cleaned_text": "",
+      "original_length": 347,
+      "cleaned_length": 0,
+      "compression_ratio": 1.0,
+      "processing_time": 7.271766662597656e-05
+    },
+    "classification": {
+      "segments": 0,
+      "structure_analysis": {},
+      "classification_results": [],
+      "processing_time": 1.9073486328125e-06
+    },
+    "extraction": {
+      "info_type": "yijing",
+      "extracted_data": {
+        "gua_name": "",
+        "gua_ci": "",
+        "tuan_ci": "",
+        "xiang_ci": "",
+        "yao_ci": "列表，0 项",
+        "annotations": "列表，0 项",
+        "case_studies": "列表，0 项",
+        "metadata": "字典，0 键"
+      },
+      "processing_time": 1.5020370483398438e-05
+    },
+    "quality_check": {
+      "overall_score": 0.0,
+      "total_issues": 0,
+      "issue_summary": {
+        "critical": 0,
+        "major": 0,
+        "minor": 0,
+        "warnings": 0
+      },
+      "top_issues": [],
+      "recommendations": [],
+      "processing_time": 4.291534423828125e-06
+    }
+  },
+  "pipeline_summary": {
+    "total_processing_time": 0.0001232624053955078,
+    "stages_time": {
+      "cleaning": 7.271766662597656e-05,
+      "classification": 1.9073486328125e-06,
+      "extraction": 1.5020370483398438e-05,
+      "quality_check": 4.291534423828125e-06
+    },
+    "performance_metrics": {
+      "chars_per_second": 2815132.4719535783,
+      "total_stages": 4,
+      "success": true
+    }
+  }
+}

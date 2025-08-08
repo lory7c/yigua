@@ -1,0 +1,14 @@
+{
+  "timestamp": "2025-08-08T07:26:13.353961",
+  "summary": {
+    "total_queries_analyzed": 0,
+    "slow_queries_found": 0,
+    "index_recommendations": 0
+  },
+  "query_analysis": [],
+  "slow_queries": [],
+  "index_recommendations": [],
+  "performance_insights": [
+    "没有分析的查询数据"
+  ]
+}

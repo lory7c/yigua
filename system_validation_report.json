@@ -1,0 +1,84 @@
+{
+  "validation_timestamp": "2025-08-08T08:04:32.856706",
+  "validation_duration_seconds": 0.15,
+  "overall_health_score": 86.9,
+  "health_grade": "B - 良好",
+  "database_validation": {
+    "database_exists": true,
+    "table_counts": {
+      "pdf_documents": 104,
+      "extracted_content": 104,
+      "hexagrams": 29,
+      "yao_content": 31,
+      "cases": 48,
+      "keywords": 371,
+      "processing_stats": 1
+    },
+    "data_consistency": {
+      "doc_content_match": true
+    },
+    "index_status": {
+      "total_indexes": 5,
+      "index_list": [
+        "idx_documents_category",
+        "idx_documents_filename",
+        "idx_hexagrams_name",
+        "idx_keywords_keyword",
+        "idx_yao_position"
+      ]
+    },
+    "foreign_key_integrity": true,
+    "issues": []
+  },
+  "results_validation": {
+    "file_exists": true,
+    "json_valid": true,
+    "summary_complete": true,
+    "results_count": 191,
+    "successful_results": 104,
+    "failed_results": 87,
+    "categories_found": [
+      "六爻",
+      "梅花易数",
+      "紫微斗数",
+      "其他术数",
+      "八字命理",
+      "大六壬",
+      "周易基础",
+      "奇门遁甲"
+    ],
+    "methods_used": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "issues": []
+  },
+  "performance_benchmark": {
+    "database_performance": {
+      "size_mb": 1.05
+    },
+    "query_times": {
+      "简单计数查询": 0.0038,
+      "分类统计查询": 0.0013,
+      "关键词搜索": 0.0019,
+      "连接查询": 0.0021,
+      "复杂聚合查询": 0.042
+    },
+    "overall_score": 8,
+    "recommendations": []
+  },
+  "summary": {
+    "total_documents_processed": 191,
+    "successful_extractions": 104,
+    "database_records": 104,
+    "categories_identified": 8,
+    "extraction_methods_used": [
+      "pymupdf",
+      "pdfplumber"
+    ],
+    "total_issues_found": 0
+  },
+  "recommendations": [
+    "优化PDF提取算法以提高成功率"
+  ]
+}
