@@ -1,0 +1,3 @@
+[submodule "yigua_app"]
+	path = yigua_app
+	url = ./
