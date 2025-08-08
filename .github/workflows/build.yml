@@ -64,7 +64,7 @@ jobs:
         path: yigua_app/build/app/outputs/flutter-apk/app-release.apk
     
     - name: Create Release
-      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: ncipollo/release-action@v1
       with:
         artifacts: "yigua_app/build/app/outputs/flutter-apk/app-release.apk"
