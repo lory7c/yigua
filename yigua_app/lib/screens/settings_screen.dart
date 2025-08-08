@@ -10,7 +10,7 @@ class SettingsScreen extends StatefulWidget {
 
 class _SettingsScreenState extends State<SettingsScreen> {
   final _apiUrlController = TextEditingController();
-  AppConfig.ApiMode _selectedMode = AppConfig.ApiMode.local;
+  ApiMode _selectedMode = ApiMode.local;
   bool _isTestingConnection = false;
 
   @override
@@ -79,10 +79,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
             
             // 模式选择
             const Text('选择数据源模式：'),
-            RadioListTile<AppConfig.ApiMode>(
+            RadioListTile<ApiMode>(
               title: const Text('本地内置'),
               subtitle: const Text('使用APP内置数据，无需网络'),
-              value: AppConfig.ApiMode.local,
+              value: ApiMode.local,
               groupValue: _selectedMode,
               onChanged: (value) {
                 setState(() {
@@ -90,10 +90,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 });
               },
             ),
-            RadioListTile<AppConfig.ApiMode>(
+            RadioListTile<ApiMode>(
               title: const Text('局域网连接'),
               subtitle: const Text('连接同一WiFi下的电脑'),
-              value: AppConfig.ApiMode.lan,
+              value: ApiMode.lan,
               groupValue: _selectedMode,
               onChanged: (value) {
                 setState(() {
@@ -101,10 +101,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 });
               },
             ),
-            RadioListTile<AppConfig.ApiMode>(
+            RadioListTile<ApiMode>(
               title: const Text('公网连接'),
               subtitle: const Text('通过ngrok等工具连接'),
-              value: AppConfig.ApiMode.internet,
+              value: ApiMode.internet,
               groupValue: _selectedMode,
               onChanged: (value) {
                 setState(() {
@@ -116,7 +116,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
             const SizedBox(height: 20),
             
             // API地址输入
-            if (_selectedMode != AppConfig.ApiMode.local) ...[
+            if (_selectedMode != ApiMode.local) ...[
               TextField(
                 controller: _apiUrlController,
                 decoration: const InputDecoration(

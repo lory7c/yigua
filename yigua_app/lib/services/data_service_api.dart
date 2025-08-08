@@ -37,7 +37,7 @@ class DataServiceApi extends ChangeNotifier {
   
   /// 检查是否在线模式
   bool get isOnlineMode {
-    return AppConfig.instance.currentMode != AppConfig.ApiMode.local;
+    return AppConfig.instance.currentMode != ApiMode.local;
   }
   
   // ==================== 易经64卦数据 ====================

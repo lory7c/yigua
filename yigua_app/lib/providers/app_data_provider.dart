@@ -27,10 +27,10 @@ class AppDataProvider extends ChangeNotifier {
   Map<String, dynamic>? get todayCalendar => _todayCalendar;
   
   /// 获取当前API模式
-  AppConfig.ApiMode get currentMode => AppConfig.instance.currentMode;
+  ApiMode get currentMode => AppConfig.instance.currentMode;
   
   /// 是否在线模式
-  bool get isOnlineMode => currentMode != AppConfig.ApiMode.local;
+  bool get isOnlineMode => currentMode != ApiMode.local;
   
   /// 构造函数
   AppDataProvider() {
@@ -308,7 +308,7 @@ class AppDataProvider extends ChangeNotifier {
   }
   
   /// 切换API模式
-  Future<void> switchApiMode(AppConfig.ApiMode mode, {String? apiUrl}) async {
+  Future<void> switchApiMode(ApiMode mode, {String? apiUrl}) async {
     _setLoading(true);
     _clearError();
     

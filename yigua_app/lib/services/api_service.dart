@@ -17,7 +17,7 @@ class ApiService {
     final config = AppConfig.instance;
     
     // 如果是本地模式，返回空
-    if (config.currentMode == AppConfig.ApiMode.local) {
+    if (config.currentMode == ApiMode.local) {
       return '';
     }
     
