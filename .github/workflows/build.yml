@@ -33,11 +33,13 @@ jobs:
     
     - name: Get dependencies
       run: |
+        cd yigua_app
         flutter clean
         flutter pub get
     
     - name: Fix build issues
       run: |
+        cd yigua_app
         echo "flutter.compileSdkVersion=34" >> android/gradle.properties
         echo "flutter.minSdkVersion=21" >> android/gradle.properties
         echo "flutter.targetSdkVersion=34" >> android/gradle.properties
@@ -64,19 +66,21 @@ jobs:
         done
     
     - name: Build APK
-      run: flutter build apk --release --no-tree-shake-icons
+      run: |
+        cd yigua_app
+        flutter build apk --release --no-tree-shake-icons
     
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
         name: app-release
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: yigua_app/build/app/outputs/flutter-apk/app-release.apk
     
     - name: Create Release
       if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+        artifacts: "yigua_app/build/app/outputs/flutter-apk/app-release.apk"
         tag: v${{ github.run_number }}
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
