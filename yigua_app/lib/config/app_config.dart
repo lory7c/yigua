@@ -1,5 +1,12 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
+// API模式枚举
+enum ApiMode {
+  local,      // 本地内置数据
+  lan,        // 局域网连接
+  internet,   // 公网连接（ngrok）
+}
+
 /// 应用配置管理
 class AppConfig {
   static AppConfig? _instance;
@@ -13,13 +20,6 @@ class AppConfig {
   // 默认配置
   static const String DEFAULT_API_URL = 'http://192.168.1.84:8888/api'; // Windows主机IP
   static const String DEFAULT_NGROK_URL = ''; // ngrok地址，使用时填入
-  
-  // API模式
-  enum ApiMode {
-    local,      // 本地内置数据
-    lan,        // 局域网连接
-    internet,   // 公网连接（ngrok）
-  }
   
   ApiMode _currentMode = ApiMode.local;
   String _customApiUrl = DEFAULT_API_URL;

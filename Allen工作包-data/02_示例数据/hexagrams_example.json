@@ -1,0 +1,81 @@
+{
+  "说明": "这是已完成的前3个卦的示例，Allen请参考这个格式完成剩余61个卦",
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾",
+      "symbol": "☰☰",
+      "number": "111111",
+      "trigram_upper": "乾",
+      "trigram_lower": "乾",
+      "meaning": "元亨利贞",
+      "judgment": "乾，元亨利贞。",
+      "image": "天行健，君子以自强不息。",
+      "interpretations": {
+        "general": "乾卦象征天，刚健中正，自强不息。",
+        "business": "事业兴旺，但需谨慎行事。",
+        "love": "感情顺利，但需真诚相待。",
+        "health": "身体健康，注意劳逸结合。"
+      },
+      "yao_texts": [
+        {"position": 1, "text": "初九：潜龙勿用", "meaning": "时机未到，需要等待"},
+        {"position": 2, "text": "九二：见龙在田，利见大人", "meaning": "崭露头角，得遇贵人"},
+        {"position": 3, "text": "九三：君子终日乾乾", "meaning": "勤奋努力，警惕危险"},
+        {"position": 4, "text": "九四：或跃在渊", "meaning": "进退有度，审时度势"},
+        {"position": 5, "text": "九五：飞龙在天，利见大人", "meaning": "事业巅峰，大展宏图"},
+        {"position": 6, "text": "上九：亢龙有悔", "meaning": "盛极必衰，需要谦逊"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "坤",
+      "symbol": "☷☷",
+      "number": "000000",
+      "trigram_upper": "坤",
+      "trigram_lower": "坤",
+      "meaning": "元亨，利牝马之贞",
+      "judgment": "坤，元亨，利牝马之贞。",
+      "image": "地势坤，君子以厚德载物。",
+      "interpretations": {
+        "general": "坤卦象征地，柔顺谦逊，包容万物。",
+        "business": "稳健发展，合作共赢。",
+        "love": "温柔体贴，相互理解。",
+        "health": "调养生息，顺其自然。"
+      },
+      "yao_texts": [
+        {"position": 1, "text": "初六：履霜，坚冰至", "meaning": "见微知著，防患未然"},
+        {"position": 2, "text": "六二：直方大，不习无不利", "meaning": "品德端正，自然顺利"},
+        {"position": 3, "text": "六三：含章可贞", "meaning": "内敛才华，等待时机"},
+        {"position": 4, "text": "六四：括囊，无咎无誉", "meaning": "谨言慎行，明哲保身"},
+        {"position": 5, "text": "六五：黄裳，元吉", "meaning": "中正谦和，大吉大利"},
+        {"position": 6, "text": "上六：龙战于野", "meaning": "阴阳相争，需要平衡"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "屯",
+      "symbol": "☵☳",
+      "number": "010001",
+      "trigram_upper": "坎",
+      "trigram_lower": "震",
+      "meaning": "元亨利贞，勿用有攸往",
+      "judgment": "屯：元亨利贞。勿用有攸往，利建侯。",
+      "image": "云雷屯，君子以经纶。",
+      "interpretations": {
+        "general": "屯卦象征初始艰难，如草木初生，需要耐心培育。",
+        "business": "创业维艰，需要稳扎稳打，不宜急进。",
+        "love": "感情初始阶段，需要时间培养，不可操之过急。",
+        "health": "注意调养身体，避免过度劳累。"
+      },
+      "yao_texts": [
+        {"position": 1, "text": "初九：磐桓，利居贞，利建侯", "meaning": "徘徊不前时宜安守本分，可寻求帮助"},
+        {"position": 2, "text": "六二：屯如邅如，乘马班如", "meaning": "进退两难，需要耐心等待时机"},
+        {"position": 3, "text": "六三：即鹿无虞，惟入于林中", "meaning": "盲目追求容易迷失方向"},
+        {"position": 4, "text": "六四：乘马班如，求婚媾", "meaning": "主动寻求合作，可得助力"},
+        {"position": 5, "text": "九五：屯其膏，小贞吉，大贞凶", "meaning": "施恩要有分寸，量力而行"},
+        {"position": 6, "text": "上六：乘马班如，泣血涟如", "meaning": "进退失据，处境艰难"}
+      ]
+    }
+  ],
+  "注意": "Allen需要继续添加第4-64卦，格式完全相同"
+}

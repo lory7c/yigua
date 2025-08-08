@@ -1,0 +1,60 @@
+{
+  "说明": "这是64卦数据模板，请按照这个格式整理所有64个卦",
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "卦名（如：乾）",
+      "symbol": "卦符（如：☰☰）",
+      "number": "二进制（如：111111）",
+      "trigram_upper": "上卦（如：乾）",
+      "trigram_lower": "下卦（如：乾）",
+      "meaning": "基本含义（一句话概括）",
+      "judgment": "卦辞原文（从古书复制）",
+      "image": "象辞原文（从古书复制）",
+      "interpretations": {
+        "general": "总体解释（现代白话文）",
+        "business": "事业运势解释",
+        "love": "感情运势解释",
+        "health": "健康运势解释"
+      },
+      "yao_texts": [
+        {
+          "position": 1,
+          "text": "初爻原文（如：初九：潜龙勿用）",
+          "meaning": "白话解释（现代文解释）"
+        },
+        {
+          "position": 2,
+          "text": "二爻原文",
+          "meaning": "白话解释"
+        },
+        {
+          "position": 3,
+          "text": "三爻原文",
+          "meaning": "白话解释"
+        },
+        {
+          "position": 4,
+          "text": "四爻原文",
+          "meaning": "白话解释"
+        },
+        {
+          "position": 5,
+          "text": "五爻原文",
+          "meaning": "白话解释"
+        },
+        {
+          "position": 6,
+          "text": "上爻原文",
+          "meaning": "白话解释"
+        }
+      ]
+    },
+    {
+      "注意": "需要整理全部64个卦，每个卦都要包含完整的6个爻辞"
+    }
+  ],
+  "version": "1.0.0",
+  "updated_at": "2025-01-08",
+  "total": 64
+}
