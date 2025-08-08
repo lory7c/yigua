@@ -1,10 +1,10 @@
-name: Build and Release APK
+name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ master, main ]
   workflow_dispatch:
 
 permissions:
@@ -29,21 +29,54 @@ jobs:
       uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.22.0'
+        channel: 'stable'
     
     - name: Get dependencies
-      run: flutter pub get
+      run: |
+        flutter clean
+        flutter pub get
+    
+    - name: Fix build issues
+      run: |
+        echo "flutter.compileSdkVersion=34" >> android/gradle.properties
+        echo "flutter.minSdkVersion=21" >> android/gradle.properties
+        echo "flutter.targetSdkVersion=34" >> android/gradle.properties
+        
+        # Create missing directories
+        mkdir -p assets/images
+        mkdir -p assets/data
+        
+        # Create placeholder files
+        touch assets/images/.gitkeep
+        touch assets/data/.gitkeep
+        
+        # Use Flutter default icon
+        cp -r $FLUTTER_ROOT/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-*/assets/CupertinoIcons.ttf android/app/src/main/res/ 2>/dev/null || true
+        
+        # Create default launcher icon directories
+        for size in hdpi mdpi xhdpi xxhdpi xxxhdpi; do
+          mkdir -p android/app/src/main/res/mipmap-$size
+          # Create a simple colored square as placeholder icon
+          echo '<?xml version="1.0" encoding="utf-8"?>
+          <shape xmlns:android="http://schemas.android.com/apk/res/android">
+              <solid android:color="#667EEA"/>
+          </shape>' > android/app/src/main/res/mipmap-$size/ic_launcher.xml
+        done
     
     - name: Build APK
-      run: flutter build apk --release
+      run: flutter build apk --release --no-tree-shake-icons
     
-    - name: Get version
-      id: version
-      run: echo "VERSION=v${{ github.run_number }}" >> $GITHUB_OUTPUT
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-release
+        path: build/app/outputs/flutter-apk/app-release.apk
     
     - name: Create Release
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       uses: ncipollo/release-action@v1
       with:
-        artifacts: build/app/outputs/flutter-apk/app-release.apk
-        tag: ${{ steps.version.outputs.VERSION }}
+        artifacts: "build/app/outputs/flutter-apk/app-release.apk"
+        tag: v${{ github.run_number }}
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
