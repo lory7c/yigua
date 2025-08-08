@@ -1,0 +1,52 @@
+{
+  "hexagrams": [
+    {
+      "id": 1,
+      "name": "乾",
+      "symbol": "☰☰",
+      "number": "111111",
+      "meaning": "元亨利贞",
+      "judgment": "乾，元亨利贞。",
+      "image": "天行健，君子以自强不息。",
+      "interpretations": {
+        "general": "乾卦象征天，刚健中正，自强不息。",
+        "business": "事业兴旺，但需谨慎行事。",
+        "love": "感情顺利，但需真诚相待。",
+        "health": "身体健康，注意劳逸结合。"
+      },
+      "yao_texts": [
+        {"position": 1, "text": "初九：潜龙勿用", "meaning": "时机未到，需要等待"},
+        {"position": 2, "text": "九二：见龙在田，利见大人", "meaning": "崭露头角，得遇贵人"},
+        {"position": 3, "text": "九三：君子终日乾乾", "meaning": "勤奋努力，警惕危险"},
+        {"position": 4, "text": "九四：或跃在渊", "meaning": "进退有度，审时度势"},
+        {"position": 5, "text": "九五：飞龙在天，利见大人", "meaning": "事业巅峰，大展宏图"},
+        {"position": 6, "text": "上九：亢龙有悔", "meaning": "盛极必衰，需要谦逊"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "坤",
+      "symbol": "☷☷",
+      "number": "000000",
+      "meaning": "元亨，利牝马之贞",
+      "judgment": "坤，元亨，利牝马之贞。",
+      "image": "地势坤，君子以厚德载物。",
+      "interpretations": {
+        "general": "坤卦象征地，柔顺谦逊，包容万物。",
+        "business": "稳健发展，合作共赢。",
+        "love": "温柔体贴，相互理解。",
+        "health": "调养生息，顺其自然。"
+      },
+      "yao_texts": [
+        {"position": 1, "text": "初六：履霜，坚冰至", "meaning": "见微知著，防患未然"},
+        {"position": 2, "text": "六二：直方大，不习无不利", "meaning": "品德端正，自然顺利"},
+        {"position": 3, "text": "六三：含章可贞", "meaning": "内敛才华，等待时机"},
+        {"position": 4, "text": "六四：括囊，无咎无誉", "meaning": "谨言慎行，明哲保身"},
+        {"position": 5, "text": "六五：黄裳，元吉", "meaning": "中正谦和，大吉大利"},
+        {"position": 6, "text": "上六：龙战于野", "meaning": "阴阳相争，需要平衡"}
+      ]
+    }
+  ],
+  "version": "1.0.0",
+  "updated_at": "2024-01-01"
+}

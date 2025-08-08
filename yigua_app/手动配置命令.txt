@@ -1,0 +1,17 @@
+在管理员CMD中运行以下两条命令：
+
+1. 配置端口转发（WSL2 IP是192.168.74.71）：
+netsh interface portproxy add v4tov4 listenport=8888 listenaddress=0.0.0.0 connectport=8888 connectaddress=192.168.74.71
+
+2. 开放防火墙端口：
+netsh advfirewall firewall add rule name="YiGua8888" dir=in action=allow protocol=TCP localport=8888
+
+配置完成后：
+- 手机访问: http://192.168.1.84:8888
+- 电脑访问: http://localhost:8888
+
+查看端口转发是否生效：
+netsh interface portproxy show all
+
+删除端口转发（如需要）：
+netsh interface portproxy delete v4tov4 listenport=8888 listenaddress=0.0.0.0

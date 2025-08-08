@@ -1,0 +1,81 @@
+{
+  "version": 2,
+  "name": "yigua-api",
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "web/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/web/$1"
+    }
+  ],
+  "env": {
+    "SUPABASE_URL": "@supabase-url",
+    "SUPABASE_ANON_KEY": "@supabase-anon-key",
+    "CF_ACCOUNT_ID": "@cf-account-id",
+    "CF_API_TOKEN": "@cf-api-token",
+    "OPENAI_API_KEY": "@openai-api-key",
+    "SYNC_SECRET_TOKEN": "@sync-secret-token",
+    "REQUIRE_AUTH": "false"
+  },
+  "functions": {
+    "api/hexagram/[id].js": {
+      "maxDuration": 10,
+      "memory": 128
+    },
+    "api/search.js": {
+      "maxDuration": 10,
+      "memory": 256
+    },
+    "api/interpret.js": {
+      "maxDuration": 30,
+      "memory": 512
+    },
+    "api/sync.js": {
+      "maxDuration": 10,
+      "memory": 128
+    }
+  },
+  "regions": ["hkg1"],
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  },
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=3600, stale-while-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/web/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}

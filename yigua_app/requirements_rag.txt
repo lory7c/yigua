@@ -1,0 +1,42 @@
+# 易学知识图谱和RAG系统依赖
+
+# 核心依赖
+numpy>=1.21.0
+torch>=2.0.0
+transformers>=4.35.0
+
+# 知识图谱
+networkx>=3.0
+
+# 向量存储
+faiss-cpu>=1.7.4  # 如果有GPU，可以改为 faiss-gpu
+sentence-transformers>=2.2.2
+
+# 数据处理
+pandas>=1.5.0
+scikit-learn>=1.0.0
+
+# 可选：本地LLM模型（根据需要选择）
+# 以下模型选择其一即可：
+
+# Option 1: Qwen
+# modelscope>=1.9.0  # 用于下载Qwen模型
+# tiktoken>=0.5.0    # Qwen tokenizer
+
+# Option 2: ChatGLM
+# protobuf>=3.20.0
+# sentencepiece>=0.1.99
+# icetk>=0.0.7
+
+# Option 3: Baichuan
+# xformers>=0.0.20  # 可选，用于加速
+
+# 工具依赖
+tqdm>=4.65.0
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# 可视化（可选）
+matplotlib>=3.5.0
+plotly>=5.14.0
+pyvis>=0.3.0  # 用于知识图谱可视化

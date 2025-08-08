@@ -1,0 +1,231 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "description": "老黄历数据和算法文件，包含天干地支、二十四节气、宜忌事项、时辰吉凶等传统历法数据",
+    "author": "易卦应用",
+    "created": "2025-08-08",
+    "encoding": "UTF-8"
+  },
+  
+  "heavenlyStems": {
+    "description": "十天干数据",
+    "data": [
+      { "id": 0, "name": "甲", "element": "木", "yin_yang": "阳", "order": 1 },
+      { "id": 1, "name": "乙", "element": "木", "yin_yang": "阴", "order": 2 },
+      { "id": 2, "name": "丙", "element": "火", "yin_yang": "阳", "order": 3 },
+      { "id": 3, "name": "丁", "element": "火", "yin_yang": "阴", "order": 4 },
+      { "id": 4, "name": "戊", "element": "土", "yin_yang": "阳", "order": 5 },
+      { "id": 5, "name": "己", "element": "土", "yin_yang": "阴", "order": 6 },
+      { "id": 6, "name": "庚", "element": "金", "yin_yang": "阳", "order": 7 },
+      { "id": 7, "name": "辛", "element": "金", "yin_yang": "阴", "order": 8 },
+      { "id": 8, "name": "壬", "element": "水", "yin_yang": "阳", "order": 9 },
+      { "id": 9, "name": "癸", "element": "水", "yin_yang": "阴", "order": 10 }
+    ]
+  },
+  
+  "earthlyBranches": {
+    "description": "十二地支数据",
+    "data": [
+      { "id": 0, "name": "子", "zodiac": "鼠", "time": "23:00-01:00", "element": "水", "yin_yang": "阳", "order": 1 },
+      { "id": 1, "name": "丑", "zodiac": "牛", "time": "01:00-03:00", "element": "土", "yin_yang": "阴", "order": 2 },
+      { "id": 2, "name": "寅", "zodiac": "虎", "time": "03:00-05:00", "element": "木", "yin_yang": "阳", "order": 3 },
+      { "id": 3, "name": "卯", "zodiac": "兔", "time": "05:00-07:00", "element": "木", "yin_yang": "阴", "order": 4 },
+      { "id": 4, "name": "辰", "zodiac": "龙", "time": "07:00-09:00", "element": "土", "yin_yang": "阳", "order": 5 },
+      { "id": 5, "name": "巳", "zodiac": "蛇", "time": "09:00-11:00", "element": "火", "yin_yang": "阴", "order": 6 },
+      { "id": 6, "name": "午", "zodiac": "马", "time": "11:00-13:00", "element": "火", "yin_yang": "阳", "order": 7 },
+      { "id": 7, "name": "未", "zodiac": "羊", "time": "13:00-15:00", "element": "土", "yin_yang": "阴", "order": 8 },
+      { "id": 8, "name": "申", "zodiac": "猴", "time": "15:00-17:00", "element": "金", "yin_yang": "阳", "order": 9 },
+      { "id": 9, "name": "酉", "zodiac": "鸡", "time": "17:00-19:00", "element": "金", "yin_yang": "阴", "order": 10 },
+      { "id": 10, "name": "戌", "zodiac": "狗", "time": "19:00-21:00", "element": "土", "yin_yang": "阳", "order": 11 },
+      { "id": 11, "name": "亥", "zodiac": "猪", "time": "21:00-23:00", "element": "水", "yin_yang": "阴", "order": 12 }
+    ]
+  },
+  
+  "solarTerms": {
+    "description": "二十四节气及其农历日期范围",
+    "data": [
+      { "name": "立春", "month": 2, "day_range": [3, 5], "description": "春季开始", "element": "木" },
+      { "name": "雨水", "month": 2, "day_range": [18, 20], "description": "降雨增多", "element": "木" },
+      { "name": "惊蛰", "month": 3, "day_range": [5, 7], "description": "春雷惊醒蛰虫", "element": "木" },
+      { "name": "春分", "month": 3, "day_range": [20, 22], "description": "昼夜等长", "element": "木" },
+      { "name": "清明", "month": 4, "day_range": [4, 6], "description": "万物复苏", "element": "木" },
+      { "name": "谷雨", "month": 4, "day_range": [19, 21], "description": "雨生百谷", "element": "木" },
+      { "name": "立夏", "month": 5, "day_range": [5, 7], "description": "夏季开始", "element": "火" },
+      { "name": "小满", "month": 5, "day_range": [20, 22], "description": "麦类小满", "element": "火" },
+      { "name": "芒种", "month": 6, "day_range": [5, 7], "description": "忙种有芒之谷类作物", "element": "火" },
+      { "name": "夏至", "month": 6, "day_range": [21, 22], "description": "白昼最长", "element": "火" },
+      { "name": "小暑", "month": 7, "day_range": [6, 8], "description": "暑热开始", "element": "火" },
+      { "name": "大暑", "month": 7, "day_range": [22, 24], "description": "一年最热", "element": "火" },
+      { "name": "立秋", "month": 8, "day_range": [7, 9], "description": "秋季开始", "element": "金" },
+      { "name": "处暑", "month": 8, "day_range": [22, 24], "description": "暑热结束", "element": "金" },
+      { "name": "白露", "month": 9, "day_range": [7, 9], "description": "露水增多", "element": "金" },
+      { "name": "秋分", "month": 9, "day_range": [22, 24], "description": "昼夜等长", "element": "金" },
+      { "name": "寒露", "month": 10, "day_range": [8, 9], "description": "露水转寒", "element": "金" },
+      { "name": "霜降", "month": 10, "day_range": [23, 24], "description": "初霜出现", "element": "金" },
+      { "name": "立冬", "month": 11, "day_range": [7, 8], "description": "冬季开始", "element": "水" },
+      { "name": "小雪", "month": 11, "day_range": [22, 23], "description": "开始降雪", "element": "水" },
+      { "name": "大雪", "month": 12, "day_range": [6, 8], "description": "降雪增多", "element": "水" },
+      { "name": "冬至", "month": 12, "day_range": [21, 23], "description": "白昼最短", "element": "水" },
+      { "name": "小寒", "month": 1, "day_range": [5, 7], "description": "开始寒冷", "element": "水" },
+      { "name": "大寒", "month": 1, "day_range": [20, 21], "description": "一年最冷", "element": "水" }
+    ]
+  },
+  
+  "activities": {
+    "description": "所有可能的宜忌活动列表",
+    "suitable": [
+      "祭祀", "祈福", "求嗣", "开光", "塑绘", "斋醮", "沐浴", "酬神", "订盟", "纳采",
+      "嫁娶", "裁衣", "合帐", "冠笄", "进人口", "安床", "解除", "出行", "移徙", "安香",
+      "入宅", "修造", "动土", "竖柱", "上梁", "开市", "立券", "交易", "纳财", "栽种",
+      "牧养", "纳畜", "教牛马", "破土", "启鑽", "安葬", "入殓", "除服", "成服", "会亲友",
+      "探病", "开仓", "经络", "造船", "割蜜", "开厕", "造畜椆栖", "修门", "定磉", "扫舍",
+      "放水", "造桥", "作梁", "修饰垣墙", "平治道涂", "整手足甲", "沐浴", "剃头", "整容"
+    ],
+    "unsuitable": [
+      "诸事不宜", "余事勿取", "动土", "破土", "安葬", "开市", "入宅", "出行", "嫁娶",
+      "订盟", "纳采", "祭祀", "祈福", "安床", "作灶", "开仓", "出货财", "上官赴任",
+      "临政亲民", "结婚姻", "纳妾", "进人口", "移徙", "安香", "雇庸", "冠笄", "会亲友",
+      "造船", "新船下水", "新车下地", "修造", "竖柱", "上梁", "修门", "作厕", "筑堤防",
+      "补垣", "造畜椆栖", "修饰垣墙", "伐木", "捕捉", "畋猎", "教牛马", "破屋坏垣"
+    ]
+  },
+  
+  "hourlyFortune": {
+    "description": "十二时辰吉凶判定",
+    "data": [
+      { "branch": "子", "time": "23:00-01:00", "fortune": ["青龙", "金匮"], "level": "大吉" },
+      { "branch": "丑", "time": "01:00-03:00", "fortune": ["天德", "玉堂"], "level": "吉" },
+      { "branch": "寅", "time": "03:00-05:00", "fortune": ["天牢", "黑煞"], "level": "凶" },
+      { "branch": "卯", "time": "05:00-07:00", "fortune": ["玄武", "天刑"], "level": "凶" },
+      { "branch": "辰", "time": "07:00-09:00", "fortune": ["司命", "黄道"], "level": "吉" },
+      { "branch": "巳", "time": "09:00-11:00", "fortune": ["勾陈", "天德"], "level": "小凶" },
+      { "branch": "午", "time": "11:00-13:00", "fortune": ["青龙", "明堂"], "level": "大吉" },
+      { "branch": "未", "time": "13:00-15:00", "fortune": ["天刑", "朱雀"], "level": "凶" },
+      { "branch": "申", "time": "15:00-17:00", "fortune": ["金匮", "宝光"], "level": "吉" },
+      { "branch": "酉", "time": "17:00-19:00", "fortune": ["天德", "玉堂"], "level": "吉" },
+      { "branch": "戌", "time": "19:00-21:00", "fortune": ["天牢", "截路"], "level": "凶" },
+      { "branch": "亥", "time": "21:00-23:00", "fortune": ["玄武", "司命"], "level": "小吉" }
+    ]
+  },
+  
+  "starGods": {
+    "description": "神煞体系",
+    "twelveGods": [
+      { "name": "青龙", "type": "吉神", "description": "主贵人相助，事业顺利" },
+      { "name": "明堂", "type": "吉神", "description": "主光明正大，利于考试求职" },
+      { "name": "天刑", "type": "凶神", "description": "主刑罚诉讼，小心官司" },
+      { "name": "朱雀", "type": "凶神", "description": "主口舌是非，注意言论" },
+      { "name": "金匮", "type": "吉神", "description": "主财运亨通，利于求财" },
+      { "name": "天德", "type": "吉神", "description": "主德行高尚，贵人多助" },
+      { "name": "白虎", "type": "凶神", "description": "主血光之灾，注意安全" },
+      { "name": "玉堂", "type": "吉神", "description": "主学业有成，文运昌盛" },
+      { "name": "天牢", "type": "凶神", "description": "主牢狱之灾，谨慎行事" },
+      { "name": "玄武", "type": "凶神", "description": "主盗贼小人，防人暗算" },
+      { "name": "司命", "type": "吉神", "description": "主生命健康，延年益寿" },
+      { "name": "勾陈", "type": "凶神", "description": "主纠纷缠绕，事多阻滞" }
+    ]
+  },
+  
+  "rules": {
+    "description": "计算每日宜忌的基本规则和算法",
+    "basicRules": {
+      "stemBranchRule": {
+        "description": "根据天干地支组合判断宜忌",
+        "formula": "(天干序号 + 地支序号) % 活动数量",
+        "explanation": "不同的天干地支组合对应不同的宜忌活动"
+      },
+      "seasonalRule": {
+        "description": "根据季节和节气调整宜忌",
+        "spring": ["宜种植", "宜出行", "忌动土"],
+        "summer": ["宜嫁娶", "宜开市", "忌移徙"],
+        "autumn": ["宜收成", "宜祭祀", "忌开工"],
+        "winter": ["宜进补", "宜安葬", "忌嫁娶"]
+      },
+      "elementRule": {
+        "description": "根据五行相生相克原理",
+        "相生": { "木": "火", "火": "土", "土": "金", "金": "水", "水": "木" },
+        "相克": { "木": "土", "火": "金", "土": "水", "金": "木", "水": "火" }
+      },
+      "weekdayRule": {
+        "description": "根据星期调整部分活动",
+        "monday": ["宜开市", "宜签约"],
+        "friday": ["宜社交", "宜娱乐"],
+        "sunday": ["宜休息", "忌开工"]
+      }
+    },
+    
+    "algorithms": {
+      "dailyCalculation": {
+        "description": "每日宜忌计算算法",
+        "steps": [
+          "1. 根据公历日期计算天干地支",
+          "2. 确定当前节气和季节",
+          "3. 应用基本规则组合",
+          "4. 计算神煞影响",
+          "5. 生成最终宜忌列表"
+        ],
+        "pseudoCode": {
+          "calculateStemBranch": "function calculateStemBranch(year, month, day) {\n  // 1900年1月31日为庚子年丁丑月丁丑日\n  const baseYear = 1900;\n  const baseStem = 6; // 庚\n  const baseBranch = 0; // 子\n  \n  const yearOffset = year - baseYear;\n  const yearStem = (baseStem + yearOffset) % 10;\n  const yearBranch = (baseBranch + yearOffset) % 12;\n  \n  // 计算月干支和日干支的方法类似\n  return { yearStem, yearBranch, monthStem, monthBranch, dayStem, dayBranch };\n}",
+          
+          "calculateSuitableActivities": "function calculateSuitableActivities(stemBranch, solarTerm, weekday) {\n  const baseActivities = [];\n  \n  // 根据天干地支计算基础宜忌\n  const stemIndex = stemBranch.dayStem;\n  const branchIndex = stemBranch.dayBranch;\n  const combinedIndex = (stemIndex * 12 + branchIndex) % activities.suitable.length;\n  \n  // 添加基础宜事\n  for (let i = 0; i < 5; i++) {\n    baseActivities.push(activities.suitable[(combinedIndex + i) % activities.suitable.length]);\n  }\n  \n  // 根据节气调整\n  if (solarTerm) {\n    baseActivities.push(...getSeasonalActivities(solarTerm.element));\n  }\n  \n  // 根据星期调整\n  baseActivities.push(...getWeekdayActivities(weekday));\n  \n  return [...new Set(baseActivities)]; // 去重\n}",
+          
+          "calculateUnsuitableActivities": "function calculateUnsuitableActivities(stemBranch, solarTerm) {\n  const unsuitableActivities = [];\n  \n  // 根据天干地支计算基础忌事\n  const conflictIndex = (stemBranch.dayStem + stemBranch.dayBranch * 2) % activities.unsuitable.length;\n  \n  for (let i = 0; i < 3; i++) {\n    unsuitableActivities.push(activities.unsuitable[(conflictIndex + i) % activities.unsuitable.length]);\n  }\n  \n  // 根据五行相克添加忌事\n  const dayElement = getElementFromStemBranch(stemBranch.dayStem, stemBranch.dayBranch);\n  const conflictElements = getConflictElements(dayElement);\n  unsuitableActivities.push(...getElementConflictActivities(conflictElements));\n  \n  return [...new Set(unsuitableActivities)];\n}"
+        }
+      },
+      
+      "hourlyFortuneCalculation": {
+        "description": "时辰吉凶计算",
+        "formula": "时辰吉凶 = (日干序号 * 2 + 时支序号) % 12",
+        "explanation": "根据日干和时支的组合，循环选择十二神煞"
+      }
+    }
+  },
+  
+  "constants": {
+    "description": "计算中使用的常量",
+    "baseDate": {
+      "year": 1900,
+      "month": 1,
+      "day": 31,
+      "stem": 6,
+      "branch": 0,
+      "description": "1900年1月31日，庚子年丁丑月丁丑日，用作计算基准"
+    },
+    "monthDays": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+    "leapYearMonthDays": [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  },
+  
+  "examples": {
+    "description": "示例计算结果",
+    "exampleDate": {
+      "date": "2025-08-08",
+      "stemBranch": {
+        "year": "乙巳",
+        "month": "甲申",
+        "day": "丙子"
+      },
+      "solarTerm": "立秋",
+      "suitable": ["祭祀", "祈福", "出行", "嫁娶", "开市"],
+      "unsuitable": ["动土", "破土", "安葬"],
+      "hourlyFortune": [
+        { "hour": "子时", "fortune": "大吉", "gods": ["青龙", "金匮"] },
+        { "hour": "丑时", "fortune": "吉", "gods": ["天德", "玉堂"] }
+      ]
+    }
+  },
+  
+  "usage": {
+    "description": "使用说明和API接口",
+    "functions": [
+      "calculateDailyStemBranch(year, month, day) - 计算指定日期的天干地支",
+      "getCurrentSolarTerm(month, day) - 获取当前节气",
+      "getSuitableActivities(stemBranch, solarTerm, weekday) - 计算宜事",
+      "getUnsuitableActivities(stemBranch, solarTerm) - 计算忌事",
+      "getHourlyFortune(dayStem, hour) - 计算时辰吉凶",
+      "getFullCalendarInfo(year, month, day) - 获取完整的黄历信息"
+    ],
+    "exampleUsage": {
+      "dart": "// 使用示例 (Dart/Flutter)\nfinal calendarService = CalendarService();\nfinal date = DateTime(2025, 8, 8);\nfinal calendarInfo = await calendarService.getCalendarInfo(date);\nprint('今日宜：${calendarInfo.suitable.join('、')}');\nprint('今日忌：${calendarInfo.unsuitable.join('、')}');"
+    }
+  }
+}
